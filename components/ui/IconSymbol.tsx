@@ -13,7 +13,7 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
-  'book.fill': 'menu-book',
+  'book.fill': 'book',
   'person.2.fill': 'diversity-3', // this one is for friends
   'gear': 'settings',
   'pills.fill': 'medication',

@@ -16,6 +16,7 @@
       }
     },
     "android": {
+      "package": "org.substancesearch.SubstanceSync",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"

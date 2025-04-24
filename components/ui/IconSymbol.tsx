@@ -13,6 +13,21 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'book.fill': 'menu-book',
+  'person.2.fill': 'diversity-3', // this one is for friends
+  'gear': 'settings',
+  'pills.fill': 'medication',
+  'cross.case.fill': 'medical-services',
+  'chart.bar.fill': 'bar-chart',
+  'star': 'star-outline',
+  'stopwatch': 'access-time',
+  'calendar': 'calendar-month',
+  'magnifyingglass': 'search',
+  'plus': 'add',
+  'paintpalette': 'palette',
+  'ruler': 'straighten',
+  'person.2': 'share', // this one is for sharing the app
+  'questionmark.circle': 'question-answer',
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

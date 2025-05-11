@@ -106,7 +106,7 @@ export default function SaferScreen() {
 
         <BlurView intensity={20} style={[styles.section, { backgroundColor: sectionBgColor }]}>
           <Pressable style={styles.link}>
-            <IconSymbol name="spray" size={24} color={tintColor} style={styles.icon} />
+            <IconSymbol name="humidifier.and.droplets.fill" size={24} color={tintColor} style={styles.icon} />
             <Text style={[styles.linkText, { color: textColor }]}>Spray Calculator</Text>
             <IconSymbol name="chevron.right" size={20} color={sectionHeaderColor} />
           </Pressable>

@@ -1,22 +1,13 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  Dimensions,
-  TouchableOpacity,
-  SafeAreaView,
-} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { Experience, Ingestion } from '@/constants/DataTypes';
-import { useRoute, useNavigation } from '@react-navigation/native';
-import MapView, { Marker } from 'react-native-maps';
+import {Dimensions, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {Experience} from '@/constants/DataTypes';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import {IconSymbol} from "@/components/ui/IconSymbol";
-
-const { width } = Dimensions.get('window');
 import {Colors} from "@/constants/Colors";
 import {useColorScheme} from "@/hooks/useColorScheme";
+
+const { width } = Dimensions.get('window');
+
 interface ExperienceDetailsRouteProps {
   params: {
     experience: Experience;
@@ -67,47 +58,6 @@ export default function ExperienceDetails() {
   );
 }
 
-// Placeholder function for interaction data (keep this as is or implement your logic)
-function getInteractionInfo(substances: string[]) {
-  if (substances.length <= 1) {
-    return [];
-  }
-
-  const interactions = [
-    {
-      substances: ['MDMA', 'Alcohol'],
-      title: 'MDMA + Alcohol: Caution',
-      description: 'Alcohol can dehydrate you further when combined with MDMA, increasing risk of overheating and neurotoxicity. Alcohol can also mask the effects of MDMA, leading to excessive consumption.',
-      recommendation: 'Avoid combining these substances. If using both, limit alcohol intake significantly and ensure proper hydration.',
-      colorStart: '#FF7043',
-      colorEnd: '#AB47BC',
-      riskLevel: 'high',
-    },
-    {
-      substances: ['Alcohol', 'Ketamine'],
-      title: 'Alcohol + Ketamine: Dangerous',
-      description: 'This combination significantly increases the risk of nausea, vomiting, and respiratory depression. Both substances are CNS depressants.',
-      recommendation: 'Avoid this combination entirely.',
-      colorStart: '#FF7043',
-      colorEnd: '#42A5F5',
-      riskLevel: 'high',
-    },
-    {
-      substances: ['LSD', 'MDMA'],
-      title: 'LSD + MDMA: Candy Flip',
-      description: 'This combination intensifies both experiences and can increase body load, potential for anxiety, and risk of dehydration.',
-      recommendation: 'Use lower doses than you would with either substance alone. Stay hydrated and ensure you have a safe environment.',
-      colorStart: '#EF5350',
-      colorEnd: '#AB47BC',
-      riskLevel: 'moderate',
-    },
-  ];
-
-  return interactions.filter(interaction => {
-    return interaction.substances.every(s => substances.includes(s));
-  });
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -153,121 +103,4 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: '#333',
   },
-  dateText: {
-    fontSize: 16,
-    color: '#444',
-    marginBottom: 4,
-  },
-  timeText: {
-    fontSize: 14,
-  },
-  locationName: {
-    fontSize: 16,
-    marginBottom: 8,
-  },
-  mapContainer: {
-    height: 200,
-    borderRadius: 8,
-    overflow: 'hidden',
-    marginVertical: 8,
-  },
-  map: {
-    width: '100%',
-    height: '100%',
-  },
-  consumerBlock: {
-    marginBottom: 16,
-    borderWidth: 1,
-    borderColor: '#eee',
-    borderRadius: 8,
-    padding: 12,
-  },
-  consumerName: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 8,
-  },
-  ingestionItem: {
-    flexDirection: 'row',
-    marginBottom: 10,
-    paddingBottom: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
-  },
-  substanceIndicator: {
-    width: 4,
-    borderRadius: 2,
-    marginRight: 12,
-  },
-  ingestionContent: {
-    flex: 1,
-  },
-  substanceName: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 2,
-  },
-  doseInfo: {
-    flexDirection: 'row',
-    marginBottom: 2,
-  },
-  doseText: {
-    fontSize: 14,
-    color: '#444',
-    marginRight: 2,
-  },
-  routeText: {
-    fontSize: 14,
-    color: '#767676',
-    fontStyle: 'italic',
-  },
-  notesText: {
-    fontSize: 14,
-    color: '#555',
-    marginTop: 4,
-    fontStyle: 'italic',
-  },
-  stomachFullnessText: {
-    fontSize: 13,
-    color: '#666',
-    marginTop: 2,
-  },
-  graphPlaceholder: {
-    height: 200,
-    backgroundColor: '#f9f9f9',
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  graphPlaceholderText: {
-    color: '#999',
-    fontStyle: 'italic',
-  },
-  interactionCard: {
-    marginBottom: 10,
-    borderRadius: 8,
-    overflow: 'hidden',
-  },
-  interactionCardGradient: {
-    padding: 16,
-  },
-  interactionTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff',
-    marginBottom: 6,
-  },
-  interactionDescription: {
-    fontSize: 14,
-    color: '#fff',
-    marginBottom: 8,
-  },
-  interactionRecommendation: {
-    fontSize: 14,
-  },
-  experienceText: {
-    fontSize: 15,
-    lineHeight: 22,
-  },
-});
+})

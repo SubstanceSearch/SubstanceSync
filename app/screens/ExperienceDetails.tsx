@@ -38,7 +38,6 @@ export default function ExperienceDetails() {
     );
   }
 
-  // Group ingestions by consumers
 
   return (
       <SafeAreaView style={[styles.container, { backgroundColor: Colors[useColorScheme() ?? 'light'].background }]}>

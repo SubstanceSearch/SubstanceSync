@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  FlatList,
-  TouchableOpacity,
-  Platform,
-} from 'react-native';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-import { useMemo } from 'react';
-import { LinearGradient } from 'expo-linear-gradient';
-import { useNavigation } from '@react-navigation/native';
-import {Experience, Ingestion, Location} from "@/constants/DataTypes";
+import React, {useEffect, useMemo, useState} from 'react';
+import {FlatList, Platform, Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View,} from 'react-native';
+import {IconSymbol} from '@/components/ui/IconSymbol';
+import {Colors} from '@/constants/Colors';
+import {useColorScheme} from '@/hooks/useColorScheme';
+import {LinearGradient} from 'expo-linear-gradient';
+import {useNavigation} from '@react-navigation/native';
+import {Experience, Ingestion} from "@/constants/DataTypes";
+
 const sampleData = require('@/constants/localdata/experiences.json');
 
 const substanceColors: Record<string, string> = {
@@ -72,10 +63,6 @@ export default function JournalScreen() {
 
   // --- Effects ---
   useEffect(() => {
-    // Placeholder for fetching and processing data
-    // Replace this with your actual data fetching logic
-
-
     // Sort data (newest first)
     const sortedData = [...sampleData].sort((a, b) => (b.sortDate || b.creationDate) - (a.sortDate || a.creationDate));
 

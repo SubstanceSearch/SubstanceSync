@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, Pressable, Switch, ScrollView } from 'react-native';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import {Pressable, ScrollView, StyleSheet, Switch, Text, View} from 'react-native';
+import {IconSymbol} from '@/components/ui/IconSymbol';
+import {Colors} from '@/constants/Colors';
+import {useColorScheme} from '@/hooks/useColorScheme';
 import Constants from 'expo-constants';
-import { BlurView } from 'expo-blur';
+import {BlurView} from 'expo-blur';
 
 export default function SettingsScreen() {
   const colorScheme = useColorScheme();
@@ -16,8 +16,6 @@ export default function SettingsScreen() {
   // Get version from app.json via Expo Constants
   const version = Constants.expoConfig?.version || '0.0.0';
 
-  // @ts-ignore
-  // @ts-ignore
   // @ts-ignore
   const renderSettingRow = (text: string, icon?: string, rightElement?: React.ReactNode, onPress?: () => void) => (
     <Pressable

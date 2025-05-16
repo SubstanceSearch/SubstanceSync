@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {FlatList, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View,} from 'react-native';
 import {IconSymbol} from '@/components/ui/IconSymbol';
 import {Colors} from '@/constants/Colors';
@@ -35,7 +35,7 @@ export default function SubstanceScreen() {
     // filteredData will now hold MergedSubstanceData objects
     const [filteredData, setFilteredData] = useState<MergedSubstanceData[]>([]);
     const navigation = useNavigation();
-
+    const listRef = useRef(null);
     // --- Data Processing Functions ---
 
     // Helper to merge arrays, preferring PW and de-duplicating
@@ -57,7 +57,6 @@ export default function SubstanceScreen() {
      */
     const processSubstanceData = (rawData: RawSubstanceData): MergedSubstanceData[] => {
         const processed: MergedSubstanceData[] = [];
-
         for (const substanceKey in rawData) {
             if (rawData.hasOwnProperty(substanceKey)) {
                 const substanceEntry = rawData[substanceKey];
@@ -232,7 +231,9 @@ export default function SubstanceScreen() {
                                 title={category}
                                 type="outline"
                                 onPress={() => console.log(`Chip Pressed: ${category}`)}
-                                onLongPress={() => setSearchQuery(category)}
+                                onLongPress={() => {
+                                    setSearchQuery(category);
+                                }}
                             />
                         ))}
 
@@ -272,8 +273,11 @@ export default function SubstanceScreen() {
                     placeholder="Search substances for names or categories"
                     placeholderTextColor={searchPlaceholderColor}
                     value={searchQuery}
-                    onChangeText={setSearchQuery}
-                    clearButtonMode="while-editing"
+                    onChangeText={(text: string) => {
+                        setSearchQuery(text); // @ts-ignore
+                        listRef.current.scrollToOffset({offset: 0, animated: false});
+                    }}
+                    clearButtonMode="always"
                 />
             </View>
 
@@ -285,6 +289,7 @@ export default function SubstanceScreen() {
             {/* Substances List */}
             <FlatList
                 data={filteredData}
+                ref={listRef}
                 keyExtractor={(item) => item.name}
                 renderItem={renderItem}
                 contentContainerStyle={styles.listContainer}

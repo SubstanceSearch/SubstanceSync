@@ -7,30 +7,19 @@ import {LinearGradient} from 'expo-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
 import {MergedSubstanceData, RawSubstanceData} from "@/constants/DataTypes";
 import {Chip} from '@rneui/themed';
-// Make sure the path to your data.json is correct
+
 const rawSubstanceData: RawSubstanceData = require('@/constants/datamed/data/data.json');
 
 const substanceColors: Record<string, string> = {
     "Unknown": '#BDBDBD',
-    // Add more substance colors here if needed,
-    // keyed by the 'name' or 'pretty_name' from your JSON data
-    "mda": '#FF6347', // Example for MDA
-    "mdpa": '#FF5733',
-    "25b-nbome": '#33FF57',
-    "cannabis": '#4CAF50',
-    "mdma": '#9C27B0',
-    "psilocybin": '#8BC34A',
-    "lsd": '#FFEB3B',
-    "dmt": '#E91E63',
-    // Add more as needed, ensuring keys are lowercase if your 'name' property is lowercase
 };
 
 export default function SubstanceScreen() {
     const colorScheme = useColorScheme();
     const tintColor = Colors[colorScheme ?? 'light'].tint;
-    const textColor = colorScheme === 'dark' ? '#fff' : '#000';
-    const searchBgColor = colorScheme === 'dark' ? '#1c1c1e' : '#f2f2f2';
-    const searchPlaceholderColor = colorScheme === 'dark' ? '#666' : '#8e8e93';
+    const textColor = Colors[colorScheme ?? 'light'].text;
+    const searchBgColor = Colors[colorScheme ?? 'light'].background;
+    const searchPlaceholderColor = Colors[colorScheme ?? 'light'].searchPlaceholder
     const [searchQuery, setSearchQuery] = useState("");
     // filteredData will now hold MergedSubstanceData objects
     const [filteredData, setFilteredData] = useState<MergedSubstanceData[]>([]);
@@ -201,7 +190,9 @@ export default function SubstanceScreen() {
         return (
             <TouchableOpacity
                 style={[styles.itemContainer, {backgroundColor: searchBgColor}]}
-                onPress={() => openSubstanceDetail(item)}
+                onPress={() => {
+                    openSubstanceDetail(item)
+                }}
             >
                 {/* Vertical gradient bar on the left */}
                 <LinearGradient colors={gradientColors} style={styles.gradientBar}/>
@@ -283,7 +274,7 @@ export default function SubstanceScreen() {
 
             {/* Results Count */}
             <Text style={styles.resultCount}>
-                {filteredData.length} substance{filteredData.length !== 1 ? 's' : ''}
+                Found {filteredData.length} substance{filteredData.length !== 1 ? 's' : ''}
             </Text>
 
             {/* Substances List */}

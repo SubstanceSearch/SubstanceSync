@@ -86,9 +86,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   headerTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#333',
+    fontSize: 34,
+    fontWeight: '700',
+    letterSpacing: -0.5,
     flex: 1,
   },
   section: {

@@ -1,0 +1,398 @@
+[
+  {
+    "location": {
+      "name": "Paris",
+      "latitude": 48.8566,
+      "longitude": 2.3522
+    },
+    "timedNotes": [
+      {
+        "note": "Eiffel Tower visit",
+        "color": "BLUE",
+        "creationDate": 1678886400000,
+        "time": 1678886400000,
+        "isPartOfTimeline": true
+      }
+    ],
+    "sortDate": 1678886400000,
+    "isFavorite": true,
+    "ingestions": [
+      {
+        "dose": 150,
+        "substanceName": "Alcohol",
+        "units": "ml",
+        "administrationRoute": "ORAL",
+        "stomachFullness": "FULL",
+        "time": 1678886400000,
+        "notes": "Red wine with dinner",
+        "creationDate": 1678890000000,
+        "consumerName": "Jean Dupont",
+        "endTime": 1678893600000,
+        "isDoseAnEstimate": false,
+        "estimatedDoseStandardDeviation": null,
+        "customUnitId": null
+      }
+    ],
+    "text": "Enjoyed a lovely evening in Paris.",
+    "creationDate": 1678890000000,
+    "ratings": [
+      {
+        "option": "plus",
+        "time": 1678897200000,
+        "creationDate": 1678900800000
+      }
+    ],
+    "title": "Parisian Alcohol"
+  },
+  {
+    "location": {
+      "name": "Tokyo",
+      "latitude": 35.6895,
+      "longitude": 139.6917
+    },
+    "timedNotes": [],
+    "sortDate": 1681564800000,
+    "isFavorite": false,
+    "ingestions": [
+      {
+        "dose": 1,
+        "substanceName": "Alcohol",
+        "units": "cup",
+        "administrationRoute": "ORAL",
+        "stomachFullness": "EMPTY",
+        "time": 1681564800000,
+        "notes": "Traditional sake tasting",
+        "creationDate": 1681568400000,
+        "consumerName": null,
+        "endTime": null,
+        "isDoseAnEstimate": false,
+        "estimatedDoseStandardDeviation": null,
+        "customUnitId": null
+      }
+    ],
+    "text": "Explored the flavors of Japan.",
+    "creationDate": 1681568400000,
+    "ratings": [],
+    "title": "Alcohol Experience"
+  },
+  {
+    "location": {
+      "name": "Rio de Janeiro",
+      "latitude": -22.9068,
+      "longitude": -43.1729
+    },
+    "timedNotes": [],
+    "sortDate": 1684243200000,
+    "isFavorite": false,
+    "ingestions": [
+      {
+        "dose": 200,
+        "substanceName": "Alcohol",
+        "units": "ml",
+        "administrationRoute": "ORAL",
+        "stomachFullness": "FULL",
+        "time": 1684243200000,
+        "notes": "Caipirinha on the beach",
+        "creationDate": 1684246800000,
+        "consumerName": null,
+        "endTime": null,
+        "isDoseAnEstimate": true,
+        "estimatedDoseStandardDeviation": 20,
+        "customUnitId": null
+      }
+    ],
+    "text": "Celebrated in Brazil with a caipirinha.",
+    "creationDate": 1684246800000,
+    "ratings": [
+      {
+        "option": "plusMinus",
+        "time": null,
+        "creationDate": 1684250400000
+      }
+    ],
+    "title": "Brazilian Alcohol"
+  },
+  {
+    "location": {
+      "name": "Amsterdam",
+      "latitude": 52.3676,
+      "longitude": 4.9041
+    },
+    "timedNotes": [],
+    "sortDate": 1686921600000,
+    "isFavorite": false,
+    "ingestions": [
+      {
+        "dose": 5,
+        "substanceName": "Cannabis",
+        "units": "g",
+        "administrationRoute": "SMOKED",
+        "stomachFullness": "EMPTY",
+        "time": 1686921600000,
+        "notes": "Relaxed in a coffee shop",
+        "creationDate": 1686925200000,
+        "consumerName": "Hans Van",
+        "endTime": 1686928800000,
+        "isDoseAnEstimate": false,
+        "estimatedDoseStandardDeviation": null,
+        "customUnitId": null
+      }
+    ],
+    "text": "Experienced the unique culture of Amsterdam.",
+    "creationDate": 1686925200000,
+    "ratings": [
+      {
+        "option": "twoPlus",
+        "time": 1686932400000,
+        "creationDate": 1686936000000
+      }
+    ],
+    "title": "Amsterdam Cannabis"
+  },
+  {
+    "location": {
+      "name": "Berlin",
+      "latitude": 52.5200,
+      "longitude": 13.4050
+    },
+    "timedNotes": [
+      {
+        "note": "Clubbing experience",
+        "color": "BLUE",
+        "creationDate": 1689513600000,
+        "time": 1689513600000,
+        "isPartOfTimeline": true
+      }
+    ],
+    "sortDate": 1689506400000,
+    "isFavorite": true,
+    "ingestions": [
+      {
+        "dose": 100,
+        "substanceName": "Amphetamine",
+        "units": "mg",
+        "administrationRoute": "ORAL",
+        "stomachFullness": "EMPTY",
+        "time": 1689506400000,
+        "notes": "Night out in Berlin",
+        "creationDate": 1689510000000,
+        "consumerName": null,
+        "endTime": 1689517200000,
+        "isDoseAnEstimate": false,
+        "estimatedDoseStandardDeviation": null,
+        "customUnitId": null
+      }
+    ],
+    "text": "Enjoyed the nightlife in Berlin.",
+    "creationDate": 1689510000000,
+    "ratings": [
+      {
+        "option": "fourPlus",
+        "time": null,
+        "creationDate": 1689520800000
+      }
+    ],
+    "title": "Berlin Amphetamine"
+  },
+  {
+    "location": {
+      "name": "Marrakech",
+      "latitude": 31.6300,
+      "longitude": -7.9900
+    },
+    "timedNotes": [],
+    "sortDate": 1692184800000,
+    "isFavorite": false,
+    "ingestions": [
+      {
+        "dose": 3,
+        "substanceName": "Cannabis",
+        "units": "g",
+        "administrationRoute": "SMOKED",
+        "stomachFullness": "FULL",
+        "time": 1692184800000,
+        "notes": "Relaxing in Morocco",
+        "creationDate": 1692188400000,
+        "consumerName": null,
+        "endTime": 1692192000000,
+        "isDoseAnEstimate": true,
+        "estimatedDoseStandardDeviation": 1,
+        "customUnitId": null
+      }
+    ],
+    "text": "Experienced the vibrant culture of Marrakech.",
+    "creationDate": 1692188400000,
+    "ratings": [
+      {
+        "option": "threePlus",
+        "time": 1692195600000,
+        "creationDate": 1692199200000
+      }
+    ],
+    "title": "Marrakech Cannabis"
+  },
+  {
+    "location": {
+      "name": "Sydney",
+      "latitude": -33.8688,
+      "longitude": 151.2093
+    },
+    "timedNotes": [],
+    "sortDate": 1694863200000,
+    "isFavorite": false,
+    "ingestions": [
+      {
+        "dose": 200,
+        "substanceName": "MDMA",
+        "units": "mg",
+        "administrationRoute": "ORAL",
+        "stomachFullness": "EMPTY",
+        "time": 1694863200000,
+        "notes": "Party in Sydney",
+        "creationDate": 1694866800000,
+        "consumerName": "Bruce Wayne",
+        "endTime": 1694870400000,
+        "isDoseAnEstimate": false,
+        "estimatedDoseStandardDeviation": null,
+        "customUnitId": null
+      }
+    ],
+    "text": "Enjoyed the sights of Sydney.",
+    "creationDate": 1694866800000,
+    "ratings": [
+      {
+        "option": "fourPlus",
+        "time": null,
+        "creationDate": 1694874000000
+      }
+    ],
+    "title": "Sydney MDMA"
+  },
+  {
+    "location": {
+      "name": "Vancouver",
+      "latitude": 49.2827,
+      "longitude": -123.1207
+    },
+    "timedNotes": [
+      {
+        "note": "Scenic views",
+        "color": "GREEN",
+        "creationDate": 1697541600000,
+        "time": 1697541600000,
+        "isPartOfTimeline": true
+      }
+    ],
+    "sortDate": 1697534400000,
+    "isFavorite": true,
+    "ingestions": [
+      {
+        "dose": 100,
+        "substanceName": "Psilocybin",
+        "units": "mg",
+        "administrationRoute": "ORAL",
+        "stomachFullness": "EMPTY",
+        "time": 1697534400000,
+        "notes": "Explored nature",
+        "creationDate": 1697538000000,
+        "consumerName": null,
+        "endTime": 1697545200000,
+        "isDoseAnEstimate": true,
+        "estimatedDoseStandardDeviation": 30,
+        "customUnitId": null
+      }
+    ],
+    "text": "Had a reflective experience in Vancouver.",
+    "creationDate": 1697538000000,
+    "ratings": [
+      {
+        "option": "threePlus",
+        "time": 1697548800000,
+        "creationDate": 1697552400000
+      }
+    ],
+    "title": "Vancouver Psilocybin"
+  },
+  {
+    "location": {
+      "name": "Mexico City",
+      "latitude": 19.4326,
+      "longitude": -99.1332
+    },
+    "timedNotes": [],
+    "sortDate": 1700212800000,
+    "isFavorite": false,
+    "ingestions": [
+      {
+        "dose": 10,
+        "substanceName": "Mescaline",
+        "units": "mg",
+        "administrationRoute": "ORAL",
+        "stomachFullness": "FULL",
+        "time": 1700212800000,
+        "notes": "Cultural exploration",
+        "creationDate": 1700216400000,
+        "consumerName": null,
+        "endTime": null,
+        "isDoseAnEstimate": false,
+        "estimatedDoseStandardDeviation": null,
+        "customUnitId": null
+      }
+    ],
+    "text": "Discovered the heart of Mexico.",
+    "creationDate": 1700216400000,
+    "ratings": [
+      {
+        "option": "twoPlus",
+        "time": null,
+        "creationDate": 1700220000000
+      }
+    ],
+    "title": "Mexico City Mescaline"
+  },
+  {
+    "location": {
+      "name": "Cairo",
+      "latitude": 30.0444,
+      "longitude": 31.2357
+    },
+    "timedNotes": [
+      {
+        "note": "Ancient wonders",
+        "color": "PURPLE",
+        "creationDate": 1702891200000,
+        "time": 1702891200000,
+        "isPartOfTimeline": true
+      }
+    ],
+    "sortDate": 1702884000000,
+    "isFavorite": true,
+    "ingestions": [
+      {
+        "dose": 100,
+        "substanceName": "Khat",
+        "units": "g",
+        "administrationRoute": "CHEWED",
+        "stomachFullness": "EMPTY",
+        "time": 1702884000000,
+        "notes": "Explored the pyramids",
+        "creationDate": 1702887600000,
+        "consumerName": "Indiana Jones",
+        "endTime": 1702894800000,
+        "isDoseAnEstimate": false,
+        "estimatedDoseStandardDeviation": null,
+        "customUnitId": null
+      }
+    ],
+    "text": "Felt the history of Egypt.",
+    "creationDate": 1702887600000,
+    "ratings": [
+      {
+        "option": "fourPlus",
+        "time": null,
+        "creationDate": 1702898400000
+      }
+    ],
+    "title": "Cairo Khat"
+  }
+]

@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, Pressable, Switch, ScrollView } from 'react-native';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import {Pressable, ScrollView, StyleSheet, Switch, Text, View} from 'react-native';
+import {IconSymbol} from '@/components/ui/IconSymbol';
+import {Colors} from '@/constants/Colors';
+import {useColorScheme} from '@/hooks/useColorScheme';
 import Constants from 'expo-constants';
-import { BlurView } from 'expo-blur';
+import {BlurView} from 'expo-blur';
 
 export default function SettingsScreen() {
   const colorScheme = useColorScheme();
@@ -16,8 +16,9 @@ export default function SettingsScreen() {
   // Get version from app.json via Expo Constants
   const version = Constants.expoConfig?.version || '0.0.0';
 
+  // @ts-ignore
   const renderSettingRow = (text: string, icon?: string, rightElement?: React.ReactNode, onPress?: () => void) => (
-    <Pressable 
+    <Pressable
       style={({pressed}) => [
         styles.settingRow,
         pressed && {opacity: 0.7, backgroundColor: colorScheme === 'dark' ? '#2c2c2e' : '#e5e5ea'}
@@ -26,10 +27,11 @@ export default function SettingsScreen() {
     >
       <View style={styles.settingWithIcon}>
         {icon && (
+            //@ts-ignore icon replacement error weirdness.
           <IconSymbol name={icon} size={24} color={tintColor} style={styles.settingIcon} />
         )}
         <Text style={[
-          styles.settingText, 
+          styles.settingText,
           { color: textColor },
           !icon && { marginLeft: 36 } // Align text when no icon
         ]}>
@@ -41,7 +43,7 @@ export default function SettingsScreen() {
   );
 
   return (
-    <ScrollView 
+    <ScrollView
       style={[styles.container, { backgroundColor: colorScheme === 'dark' ? '#000' : '#f2f2f7' }]}
       contentInsetAdjustmentBehavior="automatic"
     >
@@ -53,13 +55,13 @@ export default function SettingsScreen() {
           {renderSettingRow(
             'Require App Unlock',
             'lock',
-            <Switch 
-              value={true} 
+            <Switch
+              value={true}
               onValueChange={() => {}}
               ios_backgroundColor={colorScheme === 'dark' ? '#3a3a3c' : '#e5e5ea'}
             />
           )}
-          {renderSettingRow('After 5 minutes', 'clock', 
+          {renderSettingRow('After 5 minutes', 'clock',
             <IconSymbol name="chevron.right" size={20} color={sectionHeaderColor} />
           )}
         </BlurView>

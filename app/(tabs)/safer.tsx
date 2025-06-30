@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, Linking } from 'react-native';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Colors } from '@/constants/Colors';
@@ -106,7 +107,8 @@ export default function SaferScreen() {
 
         <BlurView intensity={20} style={[styles.section, { backgroundColor: sectionBgColor }]}>
           <Pressable style={styles.link}>
-            <IconSymbol name="spray" size={24} color={tintColor} style={styles.icon} />
+            {/* 'spray' isn't available on iOS <17 and crashes. Use widely-supported fallback. */}
+            <IconSymbol name="ruler" size={24} color={tintColor} style={styles.icon} />
             <Text style={[styles.linkText, { color: textColor }]}>Spray Calculator</Text>
             <IconSymbol name="chevron.right" size={20} color={sectionHeaderColor} />
           </Pressable>
